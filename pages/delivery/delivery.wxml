@@ -1,0 +1,15 @@
+<!--pages/delivery/delivery.wxml-->
+<view class="box_del">
+  <!--文本框-->
+  <view class="text_body">
+<textarea class="textfont" placeholder="输入你想发布的内容" ></textarea>
+  </view>
+  <!--照片上传-->
+<view></view>
+<!--类型确定-->
+<view></view>
+<!--时间确定-->
+<view></view>
+<!--赏金-->
+<view></view>
+</view>

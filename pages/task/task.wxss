@@ -1,0 +1,9 @@
+/* pages/task/task.wxss */
+.picture{
+  margin: 0,auto;
+  height: 20vh;
+  width: 100%;
+}
+.hr{
+  border:#f0f0f0 solid 1px;
+}

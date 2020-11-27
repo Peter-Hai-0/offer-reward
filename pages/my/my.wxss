@@ -1,0 +1,48 @@
+/* pages/my/my.wxss */
+.box{
+  padding: 0,2px;
+}
+.namefont{
+  margin: 2px,3px;
+  width: 90%;
+  
+}
+.individual{
+  height: 32vh;
+  width: 100%;
+  margin: 4px,3px;
+  display: flex;
+  flex-direction: column;
+}
+.textfont{
+  background-color: #f0f0f0;
+  height: 20vh;
+  width: 100%;
+  margin: 0,10px;
+}
+.update{
+  display: flex;
+  flex-direction: row;
+  margin: 2px 4px;
+}
+.btn1{
+  position: absolute;
+  left: 3px;
+  background-color: rgb(202, 205, 209);
+  margin-bottom: 4px;
+}
+.btn2{
+  position:absolute;
+  right: 3px;
+  background-color:  rgb(202, 205, 209);
+  margin-bottom: 4px;
+}
+.show{
+  margin-top: 4px;
+}
+.message{
+  margin-top: auto;
+}
+.hr{
+  border:#f5f2f2 solid 2px;
+}

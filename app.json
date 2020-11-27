@@ -1,0 +1,44 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/latest/latest",
+    "pages/task/task",
+    "pages/my/my",
+    "pages/kuaidi/kuaidi",
+    "pages/study/study",
+    "pages/pinche/pinche",
+    "pages/pindan/pindan",
+    "pages/jianzhi/jianzhi",
+    "pages/delivery/delivery"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "校园兼职",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [{
+      "iconPath": "images/index.png",
+      "selectedIconPath": "images/open_index.png",
+      "pagePath": "pages/latest/latest",
+      "text": "最新"
+    },
+    {
+      "iconPath": "images/money_0.png",
+      "selectedIconPath": "images/money_1.png",
+      "pagePath": "pages/task/task",
+      "text": "悬赏"
+    },
+    {
+      "iconPath": "images/study.png",
+      "selectedIconPath": "images/open_study.png",
+      "pagePath": "pages/my/my",
+      "text": "我的"
+    }
+
+]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,59 @@
+<!--pages/latest/latest.wxml-->
+<!--轮播图-->
+<view>
+  <view>
+    <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" 
+    duration="1000" style=" width:{{imagewidth}}px height:{{imageheight}}px">
+      <block wx:for="{{byu}}" wx:for-index="index">
+        <swiper-item>
+          <image src="{{item.src}}" class="slide-image" mode="aspectFill" bindload="imageLoad"/>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!--分界线-->
+  <view class="hr"></view>
+  <!--消息-->
+  <view class="box_latest">
+    <view class="case1">
+      <view class="type">
+        <view class="typefont">快递代领</view>
+        <view class="zuixin" bindtap="typekd">最新</view>
+      </view>
+      <image class="imgsize" bindtap="typekd"></image>
+    </view>
+    <view class="hr"></view>
+    <view class="case1">
+      <view class="type">
+        <view class="typefont">学习互助</view>
+        <view class="zuixin" bindtap="typexx">最新</view>
+      </view>
+      <image class="imgsize"></image>
+    </view>
+    <view class="hr"></view>
+    <view class="case1">
+      <view class="type">
+        <view class="typefont">拼车</view>
+        <view class="zuixin" bindtap="typepc">最新</view>
+      </view>
+      <image class="imgsize"></image>
+    </view>
+    <view class="hr"></view>
+    <view class="case1">
+      <view class="type">
+        <view class="typefont">拼单</view>
+        <view class="zuixin" bindtap="typepd">最新</view>
+      </view>
+      <image class="imgsize"></image>
+    </view>
+    <view class="hr"></view>
+    <view class="case1">
+      <view class="type">
+        <view class="typefont">兼职</view>
+        <view class="zuixin" bindtap="typejz">最新</view>
+      </view>
+      <image class="imgsize"></image>
+    </view>
+
+  </view>
+</view>

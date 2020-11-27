@@ -1,0 +1,45 @@
+/* pages/latest/latest.wxss */
+.big_pic{
+  height: 80px;
+  width: 100%;
+  margin: auto;
+}
+
+.swiper {
+  height: 200rpx;
+  width: 100%;
+ }
+ .swiper image {
+  height: 100%;
+  width: 100%;
+
+ }
+ .hr{
+   border: #f0f0f0 solid 2px;
+ }
+ .case1{
+   display: flex;
+   flex-direction: column;
+   height: 10%;
+ }
+ .type{
+   display: flex;
+   flex-direction: column;
+   margin: 4px 5%;
+ }
+ .zuixin{
+   position: absolute;
+   right:5%;
+   opacity: 0.3;
+ }
+ .tyoefont{
+   left: 5%;
+ }
+ .box_latest{
+   display:flex;
+   flex-direction: column;
+   height: 100%;
+   width: 100%;
+ }
+ 
+ 

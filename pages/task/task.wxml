@@ -1,0 +1,10 @@
+<!--pages/task/task.wxml-->
+<view class="box—_task">
+  <image src="images/xuanshangling.png" class="picture" mode="aspectFill" />
+  <!--分割线-->
+  <view class="hr"></view>
+  <!--模板-->
+  <view class="box1">
+    
+  </view>
+</view>
