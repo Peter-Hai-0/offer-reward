@@ -6,6 +6,10 @@ App({
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
 
+    //云函数初始化
+    wx.cloud.init({
+      env:"userdata-5g5kcl8za2b37c24"
+    })
     // 登录
     wx.login({
       success: res => {

@@ -15,7 +15,8 @@ Page({
     times:'12:00',
     dates:'2020-1-1',
     images:[],
-    text:''
+    text:'',
+    wages:0
   },
   //实现文本绑定
   textareainput:function(e){
@@ -41,7 +42,7 @@ Page({
   
   //悬赏类型绑定
   radiochange:function(e){
-
+    
   },
   //地图定位
   bindmapchange:function(e){
@@ -53,11 +54,24 @@ Page({
   },
   //实现赏金数据绑定
   wagesinput:function(e){
-
+        this.setData({
+          wages:e.detail.value
+        })
   },
   //实现数据上传
   submit:function(e){
-    
+      const db=wx.cloud.database();
+      var typename='kuaidi'
+      
+      db.collection(typename).add({
+        data:{
+          'context': this.data.text,
+          'dates': this.data.dates,
+          'times': this.data.times,
+          'wages':this.data.wages,
+          'image': this.data.images
+        }
+      })
   },
   /**
    * 生命周期函数--监听页面加载
