@@ -84,7 +84,6 @@ Page({
           break;
         }
       }
-      console.log(typename);
       db.collection(typename).add({
         data:{
           'context': this.data.text,
@@ -94,13 +93,31 @@ Page({
           'image': this.data.images
         }
       })
+      var that=this;
+      that.setData({
+        types:[
+          {id:'kuaidi',name:'快递代领',checked:false},
+          {id:'study',name:'学习互助',checked:false},
+          {id:'pinche',name:'拼车出行',checked:false},
+          {id:'pindan',name:'拼单购物',checked:false},
+          {id:'jianzhi',name:'校内兼职',checked:false}
+        ],
+       times:'12:00',
+        dates:'2020-1-1',
+        images:[],
+        text:'',
+        wages:0,
+      })
+      wx.switchTab({
+        url: '../delivery/delivery',
+      })
 
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+   
   },
 
   /**
