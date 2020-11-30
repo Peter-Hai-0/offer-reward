@@ -6,11 +6,11 @@ Page({
    */
   data: {
     types:[
-      {value:1,name:'快递代领'},
-      {value:2,name:'学习互助'},
-      {value:3,name:'拼车出行'},
-      {value:4,name:'拼单购物'},
-      {value:5,name:'校内兼职'}
+      {id:'kuaidi',name:'快递代领',checked:false},
+      {id:'study',name:'学习互助',checked:false},
+      {id:'pinche',name:'拼车出行',checked:false},
+      {id:'pindan',name:'拼单购物',checked:false},
+      {id:'jianzhi',name:'校内兼职',checked:false}
     ],
     times:'12:00',
     dates:'2020-1-1',
@@ -42,6 +42,21 @@ Page({
   
   //悬赏类型绑定
   radiochange:function(e){
+    var bindtype = this.data.types;
+    var that=this;
+    
+    for(const i in bindtype){
+      console.log(i)
+      if(bindtype[i].name==e.detail.value){
+        bindtype[i].checked = true;
+      }else{
+        bindtype[i].checked = false;
+      }
+    }
+    
+    that.setData({
+      types:bindtype
+    })
     
   },
   //地图定位
@@ -61,8 +76,15 @@ Page({
   //实现数据上传
   submit:function(e){
       const db=wx.cloud.database();
-      var typename='kuaidi'
-      
+      var typename='';
+      var bindtype = this.data.types;
+      for(const i in bindtype){
+        if(bindtype[i].checked==true){
+          typename=bindtype[i].id;
+          break;
+        }
+      }
+      console.log(typename);
       db.collection(typename).add({
         data:{
           'context': this.data.text,
@@ -72,6 +94,7 @@ Page({
           'image': this.data.images
         }
       })
+
   },
   /**
    * 生命周期函数--监听页面加载

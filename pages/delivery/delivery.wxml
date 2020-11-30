@@ -14,9 +14,9 @@
   <view class="hr"></view>
   <!--类型确定-->
   <view class="type_box">悬赏类型
-    <radio-group class="radio-group" bindtap="radiochange">
+    <radio-group class="radio-group" bindchange="radiochange">
       <label class="label_size" wx:for="{{types}}">
-        <radio value="{{item.value}}" checked="{{item.checked}}" class="radio">{{item.name}}</radio>
+        <radio id="{{item.name}}" checked="{{item.checked}}" value="{{item.name}}" class="radio">{{item.name}}</radio>
       </label>
     </radio-group>
   </view>
