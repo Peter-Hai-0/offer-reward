@@ -10,7 +10,8 @@ Page({
     disabled: true,
     inputValue: '',
     name:'',
-    list:[]
+    list:[],
+    
   },
   //主页输入
   bindKeyInput: function (e) {
@@ -30,12 +31,7 @@ Page({
       disabled:true,
     })
   },
-  //发布页面跳转
-  setmessage:function(){
-    wx.navigateTo({
-      url: '../delivery/delivery',
-    })
-  },
+ 
   /**
    * 生命周期函数--监听页面加载
    */

@@ -9,8 +9,8 @@
   <view class="individual">个人主页
     <textarea class="textfont" disabled="{{disabled}}" bindinput="textInput" placeholder="快来更新属于你的主页吧！" ></textarea>
     <view class="update">
-      <button class="btn1" bindtap="modify">修改</button>
-      <button class="btn2" bindtap="submit">保存</button>
+      <button class="btn1" bindtap="modify" size="mini">修改</button>
+      <button class="btn2" bindtap="submit" size="mini">保存</button>
     </view>
   </view>
   <!--分界线-->
@@ -22,7 +22,4 @@
   </view>
   <!--分界线-->
   <view class="hr"></view>
-  <!--发布消息-->
-  <view class="message" bindtap="setmessage">发布
-  </view>
 </view>

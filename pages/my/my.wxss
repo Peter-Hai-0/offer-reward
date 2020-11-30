@@ -24,18 +24,27 @@
   display: flex;
   flex-direction: row;
   margin: 2px 4px;
+  justify-content: space-around;
+  height: 50px;
 }
 .btn1{
   position: absolute;
   left: 3px;
   background-color: rgb(202, 205, 209);
+  padding: 0px,5px;
   margin-bottom: 4px;
+  padding-left: 2px;
+  padding-right:2px ;
+  width: 160px;
 }
 .btn2{
   position:absolute;
   right: 3px;
   background-color:  rgb(202, 205, 209);
   margin-bottom: 4px;
+  padding-left: 2px;
+  padding-right:2px ;
+  
 }
 .show{
   margin-top: 4px;

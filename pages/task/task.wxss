@@ -7,3 +7,44 @@
 .hr{
   border:#f0f0f0 solid 1px;
 }
+.title{
+  text-align: center;
+  color:rgb(202, 139, 20);
+  font-size: large;
+}
+.list{
+  margin: 2px,8px;
+  padding: 0,4px;
+}
+.list_item{
+  display: flex;
+  flex-direction: column;
+}
+.item_size{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.numb{
+  padding-left: 4px;
+  color: red;
+}
+.type_font{
+  font-size: smaller;
+  
+}
+.time_font{
+  font-size: smaller;
+}
+.date_font{
+  font-size: smaller;
+}
+.wages_font{
+  font-size: smaller;
+}
+.detail_font{
+  opacity: 0.4;
+  font-size: smaller;
+  margin-right: 5px;
+}

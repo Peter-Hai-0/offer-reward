@@ -5,9 +5,16 @@ Page({
    * 页面的初始数据
    */
   data: {
+    lists:[
+      {id:1,type:'快递代领',time:'14:30',date:'12-3',wages:10},
+      {id:2,type:'快递代领',time:'13:30',date:'12-3',wages:9},
+      {id:3,type:'拼车',time:'14:30',date:'12-3',wages:8}
+    ]
+  },
+  //详情实现
+  binddetail:function(e){
 
   },
-
   /**
    * 生命周期函数--监听页面加载
    */

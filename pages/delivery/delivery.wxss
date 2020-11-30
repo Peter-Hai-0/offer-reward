@@ -1,1 +1,63 @@
 /* pages/delivery/delivery.wxss */
+.box_del{
+  height: 100%;
+}
+.text_body{
+  height: 20vh;
+  width: 100%;
+}
+.picture_size{
+  height: 5vh;
+  width: 10vw;
+}
+
+.hr{
+  border:#f5f2f2 solid 2px;
+}
+.radio-group{
+  margin-top: 4px;
+  display: flex;
+  flex-direction: row;
+
+}
+.radio{
+  size: 2px;
+  font-size: 13px;
+}
+.type_box{
+  font-size: smaller;
+  height: 55px;
+}
+.label_size{
+  margin: 2px,auto;
+  border-radius: 50%;
+}
+.time_box{
+  font-size: smaller;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 4px;
+  margin-right:4px ;
+}
+.wages_box{
+  font-size: smaller;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
+}
+.input_font{
+  width: 80px;
+  padding-left: 10px;
+}
+.wages{
+  margin-left: 4px;
+}
+.bt_box{
+  justify-content: center;
+  margin-top: 10px;
+}
+.btn{
+  color: yellow;
+}

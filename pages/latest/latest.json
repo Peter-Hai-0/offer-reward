@@ -1,5 +1,6 @@
 {
   "navigationBarBackgroundColor": "#f0f0f0",
-  "usingComponents": {}
+  "usingComponents": {},
+  "navigationBarTitleText": "最新"
   
 }

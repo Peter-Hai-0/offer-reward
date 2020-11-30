@@ -2,14 +2,53 @@
 <view class="box_del">
   <!--文本框-->
   <view class="text_body">
-<textarea class="textfont" placeholder="输入你想发布的内容" ></textarea>
+    <textarea class="textfont" placeholder="输入你想发布的内容" bindblur="textareainput"></textarea>
   </view>
+  <!--分界线-->
+  <view class="hr"></view>
   <!--照片上传-->
-<view></view>
-<!--类型确定-->
-<view></view>
-<!--时间确定-->
-<view></view>
-<!--赏金-->
-<view></view>
+  <view class="picture_body">
+    <image src="images/upload.png" mode="aspectFit" class="picture_size" bindtap="bindloadpicture" />
+  </view>
+  <!--分界线-->
+  <view class="hr"></view>
+  <!--类型确定-->
+  <view class="type_box">悬赏类型
+    <radio-group class="radio-group" bindtap="radiochange">
+      <label class="label_size" wx:for="{{types}}">
+        <radio value="{{item.value}}" checked="{{item.checked}}" class="radio">{{item.name}}</radio>
+      </label>
+    </radio-group>
+  </view>
+  <!--分界线-->
+  <view class="hr"></view>
+  <!--时间确定-->
+  <view class="time_box">时间
+    <view class="selection">
+      <picker mode="time" value="{{time}}" start="00:00" end="23:59" bindchange="timechange">
+        <view class="picker">
+          时间：{{times}}
+        </view>
+      </picker>
+    </view>
+    <view class="selection">
+      <picker mode="date" value="{{date}}" start="2020-01-01" end="2027-1-1" bindchange="bindDateChange">
+        <view class="picker">
+          日期: {{dates}}
+        </view>
+      </picker>
+    </view>
+    <view class="location" bindtap="bindmapchange">地图
+    </view>
+  </view>
+  <!--分界线-->
+  <view class="hr"></view>
+  <!--赏金-->
+  <view class="wages_box">
+    <text class="wages">赏金</text>
+    <input class="input_font" placeholder="请输入赏金" type="number" bindinput="wagesinput" />
+  </view>
+  <view class="btn_box">
+    <button class="btn"bindtap="submit">发布</button>
+  </view>
 </view>

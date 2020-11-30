@@ -5,6 +5,20 @@
   <view class="hr"></view>
   <!--模板-->
   <view class="box1">
-    
+    <view class="title">悬赏榜</view>
+    <view class="list">
+      <view class="list_item" wx:for="{{lists}}" >
+        <view class="item_size">
+          <view class="numb">{{item.id}}</view>
+          <view class="type_font">{{item.type}}</view>
+          <view class="times">
+            <view class="time_font">{{item.time}}</view>
+            <view class="date_font">{{item.date}}</view>
+          </view>
+          <view class="wages_font">{{item.wages}}</view>
+          <view class="detail_font" bindtap="binddetail">详情</view>
+        </view>
+      </view>
+    </view>
   </view>
 </view>
