@@ -9,7 +9,8 @@
     "pages/pinche/pinche",
     "pages/pindan/pindan",
     "pages/jianzhi/jianzhi",
-    "pages/delivery/delivery"
+    "pages/delivery/delivery",
+    "pages/delete/delete"
   ],
   "window": {
     "backgroundTextStyle": "light",

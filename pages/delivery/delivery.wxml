@@ -1,17 +1,19 @@
 <!--pages/delivery/delivery.wxml-->
 <view class="box_del">
   <!--文本框-->
+  <form bindreset="reset">
   <view class="text_body">
     <textarea class="textfont" placeholder="输入你想发布的内容" bindblur="textareainput"></textarea>
   </view>
+  </form>
   <!--分界线-->
   <view class="hr"></view>
   <!--照片上传-->
-  <view class="picture_body">
+  <!-- <view class="picture_body">
     <image src="images/upload.png" mode="aspectFit" class="picture_size" bindtap="bindloadpicture" />
-  </view>
+  </view> -->
   <!--分界线-->
-  <view class="hr"></view>
+  <!-- <view class="hr"></view> -->
   <!--类型确定-->
   <view class="type_box">悬赏类型
     <radio-group class="radio-group" bindchange="radiochange">
@@ -44,11 +46,13 @@
   <!--分界线-->
   <view class="hr"></view>
   <!--赏金-->
+  <form bindreset="foo">
   <view class="wages_box">
     <text class="wages">赏金</text>
     <input class="input_font" placeholder="请输入赏金" type="number" bindinput="wagesinput" />
   </view>
+</form>
   <view class="btn_box">
-    <button class="btn"bindtap="submit">发布</button>
+    <button class="btn" bindtap="submit">发布</button>
   </view>
 </view>

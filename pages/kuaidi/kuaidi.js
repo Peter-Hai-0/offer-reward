@@ -1,18 +1,68 @@
-// pages/kuaidi/kuaidi.js
-Page({
+const db=wx.cloud.database();
 
+Page({
+  
   /**
    * 页面的初始数据
    */
   data: {
-
+    // feeds:{},
+    kuaidi:[],
   },
+  //触顶更新
+  upper:function(){
+    this.updateDatas()
+  },
+  //下拉更新
+  onPullDownRefresh: function() {
+    this.updateDatas()
+  },
+  //更新函数
+  updateDatas(page){
+    db.collection("kuaidi").limit(3).skip(page)
+    .orderBy('submittime','desc')
+    .get()
+    .then(res=>{
+      var olddata=this.data.kuaidi
+      var newdata=olddata.concat(res.data)
+      this.setData({
+        kuaidi:newdata
+      })
+      // //保存页面缓存
+      // wx.setStorage({
+      //   key: "data_feeds",
+      //   data: feeds
+      // })
+    })
+  },
+  //跳转到详情页并传递参数
+  // bindViewTap: function (e) {
+  //   var currentid = e.currentTarget.dataset._id;
+  //   try {
+  //     wx.setStorageSync('current_data', _id)
+  //   } catch (e) {
+  //   }
+  //   wx.navigateTo({
+  //     url: '../details/details'
+  //   })
+  // },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-
+  onLoad: function () {
+    // var that = this
+    // var feeds = wx.getStorageSync('data_feeds')
+    // if (feeds) {
+    //   that.setData({
+    //     feeds: feeds
+    //   })
+    // } else {
+      this.updateDatas(0)
+    // }
+  },
+  imageError: function (e) {
+    console.log('image发生error事件，携带值为', e.detail.errMsg)
   },
 
   /**
@@ -54,7 +104,8 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    var page=this.data.kuaidi.length
+    this.updateDatas(page)
   },
 
   /**
