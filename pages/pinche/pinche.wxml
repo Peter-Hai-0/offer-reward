@@ -1,2 +1,5 @@
 <!--pages/pinche/pinche.wxml-->
-<text>pages/pinche/pinche.wxml</text>
+<!--使用模板-->
+
+<import src="../template/template_show1.wxml"></import>
+<template is="showrecord" data="{{list}}"></template>

@@ -13,6 +13,12 @@ Page({
     list:[],
     
   },
+  //跳转至删除界面
+  typedelete:function(){
+    wx.navigateTo({
+      url: '../delete/delete',
+    })
+  },
   //主页输入
   bindKeyInput: function (e) {
     this.setData({

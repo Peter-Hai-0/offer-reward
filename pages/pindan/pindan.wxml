@@ -1,2 +1,3 @@
 <!--pages/pindan/pindan.wxml-->
-<text>pages/pindan/pindan.wxml</text>
+<import src="../template/template_show1.wxml"></import>
+<template is="showrecord" data="{{list}}"></template>

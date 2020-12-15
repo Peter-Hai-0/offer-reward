@@ -1,1 +1,66 @@
 /* pages/delete/delete.wxss */
+.title{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-bottom: #f0f0f0 solid 2px;
+}
+.row{
+  padding: 4rpx 30rpx;
+  margin: 10rpx 0;
+  background-color: white;
+ }
+.container{
+ display: flex;
+ flex-direction: column;
+ margin-top: auto;
+ background-color: white;
+}
+.feed-source{
+ background-color: ivory;
+ display: flex;
+ flex-direction: row;
+}
+.name-font{
+ justify-items: center;
+ align-items: center;
+ font-size: 25px;
+ padding: left 5px ;
+}
+.rightcorner{
+ position: absolute;
+ right: 16px;
+ display: flex;
+ flex-direction: column;
+ justify-items: center;
+ align-items: center;
+}
+.submittime{
+ margin-top: 10rpx;
+ align-items: center;
+ font-size: small;
+}
+.feed-content{
+ background-color: ivory;
+}
+.hr{
+ border:solid 2px;
+ color:black;
+}
+.wages{
+ font-family: 'Courier New', Courier, monospace;
+ font-size: large;
+}
+
+.context{
+ word-break: break-all;
+}
+.wages-time{
+ display: flex;
+ flex-direction: row;
+}
+.btn{
+  margin-top: 20rpx;
+  color: #000;
+}
+

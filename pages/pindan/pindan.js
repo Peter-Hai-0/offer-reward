@@ -1,18 +1,55 @@
-// pages/pindan/pindan.js
-Page({
+const db=wx.cloud.database();
 
+Page({
+  
   /**
    * 页面的初始数据
    */
   data: {
-
+    // feeds:{},
+    list:[],
   },
+  //触顶更新
+  upper:function(){
+    this.updateDatas()
+  },
+  //下拉更新
+  onPullDownRefresh: function() {
+    this.updateDatas()
+  },
+  //更新函数
+  updateDatas(page){
+    db.collection("pindan").limit(3).skip(page)
+    .orderBy('submittime','desc')
+    .get()
+    .then(res=>{
+      var olddata=this.data.list
+      var newdata=olddata.concat(res.data)
+      this.setData({
+        list:newdata
+      })
+      console.log(this.data.list);
+    })
+  },
+
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-
+  onLoad: function () {
+    // var that = this
+    // var feeds = wx.getStorageSync('data_feeds')
+    // if (feeds) {
+    //   that.setData({
+    //     feeds: feeds
+    //   })
+    // } else {
+      this.updateDatas(0)
+      console.log(this.data.list)
+    // }
+  },
+  imageError: function (e) {
+    console.log('image发生error事件，携带值为', e.detail.errMsg)
   },
 
   /**
@@ -54,7 +91,8 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    var page=this.data.list.length
+    this.updateDatas(page)
   },
 
   /**

@@ -7,7 +7,7 @@ Page({
    */
   data: {
     // feeds:{},
-    kuaidi:[],
+    list:[],
   },
   //触顶更新
   upper:function(){
@@ -23,29 +23,15 @@ Page({
     .orderBy('submittime','desc')
     .get()
     .then(res=>{
-      var olddata=this.data.kuaidi
+      var olddata=this.data.list
       var newdata=olddata.concat(res.data)
       this.setData({
-        kuaidi:newdata
+        list:newdata
       })
-      // //保存页面缓存
-      // wx.setStorage({
-      //   key: "data_feeds",
-      //   data: feeds
-      // })
+      console.log(this.data.list)
     })
   },
-  //跳转到详情页并传递参数
-  // bindViewTap: function (e) {
-  //   var currentid = e.currentTarget.dataset._id;
-  //   try {
-  //     wx.setStorageSync('current_data', _id)
-  //   } catch (e) {
-  //   }
-  //   wx.navigateTo({
-  //     url: '../details/details'
-  //   })
-  // },
+
 
   /**
    * 生命周期函数--监听页面加载
@@ -104,7 +90,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    var page=this.data.kuaidi.length
+    var page=this.data.list.length
     this.updateDatas(page)
   },
 

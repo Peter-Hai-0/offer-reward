@@ -1,0 +1,72 @@
+<!--模板-->
+<template name="showrecord">
+  <scroll-view scroll-y="true" class="container" upper-threshold="5" bindscrolltoupper="upper">
+    <view class="row" wx:for="{{list}}">
+      <view class="feed-source">
+        <!-- <view class="avatar">
+          <image src="{{item.avatar}}"></image>
+        </view> -->
+        <view class="name-font">{{item.nickName}}</view>
+        <view class="rightcorner">
+          <view class="submittime">{{item.submittime_view}}</view>
+        </view>
+      </view>
+      <view class="hr"></view>
+      <view class="feed-content">
+        <view class="context">
+          <text class="context">
+            内容：{{item.context}}
+          </text>
+        </view>
+        <view class="wages">
+          <text>
+            赏金：{{item.wages}}
+          </text>
+        </view>
+        <view class="dates-times">
+          <text>
+            需求时间：{{item.dates}} {{item.times}}
+          </text>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  <!-- </view> -->
+</template>
+
+
+<template name="showrecord_1">
+  <view class="row" wx:for="{{list}}">
+        <!-- <view class="feed-item" bindtap="bindViewTap" data-id="{{item._id}}"> -->
+        <view class="feed-source">
+          <!-- <view class="avatar">
+          <image src="{{item.avatar}}"></image>
+        </view> -->
+          <view class="name-font">{{item.nickName}}</view>
+          <view class="rightcorner">
+
+            <view class="submittime">{{item.submittime_view}}</view>
+          </view>
+        </view>
+        <view class="hr"></view>
+        <view class="feed-content">
+          <view class="context">
+            <text class="context">
+              内容：{{item.context}}
+            </text>
+          </view>
+
+          <view class="wages">
+            <text>
+              赏金：{{item.wages}}
+            </text>
+          </view>
+          <view class="dates-times">
+            <text>
+              需求时间：{{item.dates}} {{item.times}}
+            </text>
+          </view>
+        </view>
+      </view>
+  <!-- </view> -->
+</template>

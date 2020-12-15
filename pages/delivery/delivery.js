@@ -36,6 +36,7 @@ Page({
     images: [],
     text: '',
     wages: '',
+    nickName:'',
   },
   //实现文本绑定
   textareainput: function (e) {
@@ -143,6 +144,7 @@ Page({
         'times': this.data.times,
         'wages': this.data.wages,
         'image': this.data.images,
+        'nickName':this.data.nickName,
         'submittime_view':this.getsubtime(stime), 
         'submittime':stime 
       }
@@ -213,7 +215,16 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log("onload")
+    wx.getUserInfo({
+      success:res=>{
+        this.setData({
+          nickName:res.userInfo.nickName,
+          avatarUrl:res.userInfo.avatarUrl
+        })
+        console.log("get userInfo success")
+      }
+    })
   },
 
   /**

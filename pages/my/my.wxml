@@ -16,10 +16,11 @@
   <!--分界线-->
   <view class="hr"></view>
   <!--最近发布-->
-  <view class="show">最近7条发布记录
+  <view class="show">
     <!--引进模板，显示最近7条信息-->
     <import></import>
   </view>
+  <button type="primary"  class="primary" bindtap="typedelete">查看并管理我的发布记录</button>
   <!--分界线-->
   <view class="hr"></view>
 </view>

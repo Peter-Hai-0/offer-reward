@@ -1,5 +1,6 @@
 // pages/latest/latest.js
 var imageUtil = require('../../utils/util.js');
+const db=wx.cloud.database();
 Page({
 
   /**
@@ -16,7 +17,51 @@ Page({
       {src:'images/byu1.png'},
       {src:'images/byu2.png'}
     ],
-    content:[]
+  },
+  //获取最新一条的数据
+  updateDatas:function(){
+    db.collection("kuaidi").limit(1)
+    .orderBy('submittime','desc')
+    .get()
+    .then(res=>{
+      this.setData({
+        kuaidi:res.data
+      })
+    })
+    db.collection("pindan").limit(1)
+    .orderBy('submittime','desc')
+    .get()
+    .then(res=>{
+      this.setData({
+        pindan:res.data
+      })
+    })
+    db.collection("pinche").limit(1)
+    .orderBy('submittime','desc')
+    .get()
+    .then(res=>{
+      this.setData({
+        pinche:res.data
+      })
+    })
+
+    db.collection("study").limit(1)
+    .orderBy('submittime','desc')
+    .get()
+    .then(res=>{
+      this.setData({
+        study:res.data
+      })
+    })
+    db.collection("jianzhi").limit(1)
+    .orderBy('submittime','desc')
+    .get()
+    .then(res=>{
+      this.setData({
+        jianzhi:res.data
+      })
+    })
+    
   },
   //快递页面跳转
   typekd:function(){
@@ -62,7 +107,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-   
+   this.updateDatas();
   },
 
   /**

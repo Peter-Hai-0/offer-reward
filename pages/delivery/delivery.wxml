@@ -15,7 +15,7 @@
   <!--分界线-->
   <!-- <view class="hr"></view> -->
   <!--类型确定-->
-  <view class="type_box">悬赏类型
+  <view class="type_box">需求类型
     <radio-group class="radio-group" bindchange="radiochange">
       <label class="label_size" wx:for="{{types}}">
         <radio id="{{item.name}}" checked="{{item.checked}}" value="{{item.name}}" class="radio">{{item.name}}</radio>
@@ -40,7 +40,7 @@
         </view>
       </picker>
     </view>
-    <view class="location" bindtap="bindmapchange">地图
+    <view class="location" bindtap="bindmapchange">
     </view>
   </view>
   <!--分界线-->
@@ -48,11 +48,11 @@
   <!--赏金-->
   <form bindreset="foo">
   <view class="wages_box">
-    <text class="wages">赏金</text>
-    <input class="input_font" placeholder="请输入赏金" type="number" bindinput="wagesinput" />
+    <text class="wages">报酬</text>
+    <input class="input_font" placeholder="请输入报酬" type="number" bindinput="wagesinput" />
   </view>
 </form>
   <view class="btn_box">
-    <button class="btn" bindtap="submit">发布</button>
+    <button type="primary" class="btn" bindtap="submit">发布</button>
   </view>
 </view>
